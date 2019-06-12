@@ -30,7 +30,7 @@ public class Test_Devolucion extends BaseTest{
 	  Assert.assertEquals(rp.devolucion(),"Product Returns");
   }
   
-  @DataProvider(name = "registros")
+  @DataProvider(name = "login")
 	public Iterator<Object []> provider() {
 		return wdUtils.getCSV(Constants.LOGIN_CSV_FILE);
 	}

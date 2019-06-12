@@ -1,5 +1,6 @@
 package Tests;
 
+import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -34,6 +35,7 @@ public abstract class BaseTest {
 
 	@BeforeTest //ejecutar antes de todos los tests
 	public void SetUp() {
+		System.setProperty("base_dir",System.getProperty("user.dir").replace("target", ""));
 		System.setProperty("webdriver.chrome.driver",Constants.CHROME_DRIVER);
 		System.setProperty("webdriver.gecko.driver",Constants.FIREFOX_DRIVER);
 		//driverf = new FirefoxDriver();
