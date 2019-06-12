@@ -1,10 +1,13 @@
 package Tests;
 
+import java.util.Iterator;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import Utils.Constants;
 import Utils.wdUtils;
 import pages.Cart_Page;
 import pages.Checkout_Page;
@@ -33,13 +36,18 @@ public class Test_CompraProductos extends BaseTest{
 		homepage.Logout();
 	}
 	
-	@DataProvider(name="login")
-    public Object[][] getDataFromDataprovider(){
-    return new Object[][] 
-    	{
-            { "cualquiercosas4646467@mail.com","Hola_1234" },
-            { "cualquiercosas4646467@mail.com","Hola_1234" },
-            { "cualquiercosas4646467@mail.com","Hola_1234" }
-        };
-    }
+	@DataProvider(name = "login")
+	public Iterator<Object []> provider() {
+		return wdUtils.getCSV(Constants.LOGIN_CSV_FILE);
+	}
+	
+//	@DataProvider(name="login")
+//    public Object[][] getDataFromDataprovider(){
+//    return new Object[][] 
+//    	{
+//            { "cualquiercosas4646467@mail.com","Hola_1234" },
+//            { "cualquiercosas4646467@mail.com","Hola_1234" },
+//            { "cualquiercosas4646467@mail.com","Hola_1234" }
+//        };
+//    }
 }

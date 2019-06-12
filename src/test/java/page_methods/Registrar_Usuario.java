@@ -5,6 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import Utils.wdUtils;
+
 public class Registrar_Usuario {
 
 	public static void SignUp(List<WebElement> lista, List<String> datos, WebElement subscribe, WebElement check) {
@@ -18,11 +20,7 @@ public class Registrar_Usuario {
 			}
 			if (aux.getTagName().contains("select")) {
 				aux.click();
-				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				wdUtils.wait(3000);
 				aux.findElements(By.xpath("option")).get(11).click();
 			}
 		}

@@ -16,7 +16,7 @@ public class TestRegistro extends BaseTest {
 	
 	@DataProvider(name = "registros")
 	public Iterator<Object []> provider() {
-		return wdUtils.getCSV(Constants.CSV_FILE);
+		return wdUtils.getCSV(Constants.SIGNUP_CSV_FILE);
 	}
 
 	@Test(dataProvider = "registros")

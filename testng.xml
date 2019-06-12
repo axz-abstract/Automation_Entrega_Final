@@ -5,10 +5,29 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
+	<test thread-count="5" name="Test Registro" parallel="false">
+		<classes>
+			<class name="Tests.TestRegistro" />
+		</classes>
+	</test>
 	<test thread-count="5" name="Test login" parallel="false">
 		<classes>
 			<class name="Tests.Test_Login" />
-			<class name="Tests.TestPrueba" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
+	<test thread-count="5" name="Test Navegación" parallel="false">
+		<classes>
+			<class name="Tests.Test_Navegar_Buscar" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Test Compra Productos" parallel="false">
+		<classes>
+			<class name="Tests.Test_CompraProductos" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Test Devolución" parallel="false">
+		<classes>
+			<class name="Tests.Devolucion" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

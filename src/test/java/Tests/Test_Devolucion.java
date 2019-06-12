@@ -1,10 +1,13 @@
 package Tests;
 
+import java.util.Iterator;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import Utils.Constants;
 import Utils.wdUtils;
 import pages.HomePage;
 import pages.LoginPage;
@@ -27,13 +30,18 @@ public class Test_Devolucion extends BaseTest{
 	  Assert.assertEquals(rp.devolucion(),"Product Returns");
   }
   
-  @DataProvider(name="login")
-  public Object[][] getDataFromDataprovider(){
-  return new Object[][] 
-  	{
-          { "cualquiercosas4646467@mail.com","Hola_1234" },
-          { "cualquiercosas4646467@mail.com","Hola_1234" },
-          { "cualquiercosas4646467@mail.com","Hola_1234" }
-      };
-  }
+  @DataProvider(name = "registros")
+	public Iterator<Object []> provider() {
+		return wdUtils.getCSV(Constants.LOGIN_CSV_FILE);
+	}
+  
+//  @DataProvider(name="login")
+//  public Object[][] getDataFromDataprovider(){
+//  return new Object[][] 
+//  	{
+//          { "cualquiercosas4646467@mail.com","Hola_1234" },
+//          { "cualquiercosas4646467@mail.com","Hola_1234" },
+//          { "cualquiercosas4646467@mail.com","Hola_1234" }
+//      };
+//  }
 }
