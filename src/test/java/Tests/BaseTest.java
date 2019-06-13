@@ -35,7 +35,7 @@ public abstract class BaseTest {
 
 	@BeforeTest //ejecutar antes de todos los tests
 	public void SetUp() {
-		System.setProperty("base_dir",System.getProperty("user.dir").replace("target", ""));
+		System.setProperty("base_dir",System.getProperty("user.dir").replace("target", "")); //al ejecutar desde maven la ruta del proyecto se modifica
 		System.setProperty("webdriver.chrome.driver",Constants.CHROME_DRIVER);
 		System.setProperty("webdriver.gecko.driver",Constants.FIREFOX_DRIVER);
 		//driverf = new FirefoxDriver();
