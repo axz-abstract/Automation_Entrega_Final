@@ -8,6 +8,6 @@ public class Constants {
 	public static final String CHROME_DRIVER = System.getProperty("base_dir")+"/src/test/java/drivers/chromedriver.exe";
 	public static final String SIGNUP_CSV_FILE = System.getProperty("base_dir")+"/src/test/java/Utils/registro.csv";
 	public static final String LOGIN_CSV_FILE = System.getProperty("base_dir")+"/src/test/java/Utils/login.csv";
-	public static final String CONFIG_PROP = System.getProperty("base_dir")+"/src/test/java/Utils/config.properties";
+	public static final String CONFIG_PROP = System.getProperty("base_dir")+"src/test/java/Utils/config.properties";
 
 }
