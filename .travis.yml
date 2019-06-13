@@ -1,7 +1,7 @@
 language: java
 jdk: oraclejdk8
 install: true
-script: ls -d */
+script: find . -type d -ls
 cache:
   directories:
   - $HOME/.m2
