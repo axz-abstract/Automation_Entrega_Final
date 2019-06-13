@@ -32,7 +32,7 @@ public class wdUtils {
 	}
 	
 	public wdUtils() {
-		InputStream in = getClass().getResourceAsStream("config.properties");
+		InputStream in = getClass().getResourceAsStream(Constants.CONFIG_PROP);
 		prop = new Properties();
 		try {
 			prop.load(in);
