@@ -32,6 +32,10 @@ public class wdUtils {
 	}
 	
 	public wdUtils() {
+		System.setProperty("base_dir",System.getProperty("user.dir").replace("target", "")); //al ejecutar desde maven la ruta del proyecto se modifica
+		System.out.println(System.getProperty("user.dir"));
+		System.out.println(System.getProperty("base_dir"));
+		
 		InputStream in = getClass().getResourceAsStream("config.properties");
 		prop = new Properties();
 		try {
