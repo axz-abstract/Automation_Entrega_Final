@@ -35,7 +35,7 @@ public class wdUtils {
 		System.out.println("java.class:  === " + System.getProperty("java.class.path"));
 		System.out.println("user.dir:    === " + System.getProperty("user.dir"));
 		
-		InputStream in = getClass().getResourceAsStream("config.properties");
+		InputStream in = getClass().getResourceAsStream(System.getProperty("user.dir") + "/test-classes/Utils/config.properties");
 		prop = new Properties();
 		try {
 			prop.load(in);
