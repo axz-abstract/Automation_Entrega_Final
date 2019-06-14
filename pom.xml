@@ -77,7 +77,7 @@
 				<configuration>
 <!-- 					<argLine>${surefireArgLine} -Xms1024m -Xmx2048m</argLine> -->
 <!--					<reuseForks>true</reuseForks> -->
-					<useSystemClassLoader>false</useSystemClassLoader>
+					<useSystemClassLoader>true</useSystemClassLoader>
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
