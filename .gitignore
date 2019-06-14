@@ -1,8 +1,5 @@
 .classpath
 .settings
 .project
-/target/surefire/
-/target/surefire-reports/
 /test-output/
-
 /target/
