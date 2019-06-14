@@ -75,7 +75,7 @@
 				<version>2.20.1</version>
 				<inherited>true</inherited>
 				<configuration>
-					<argLine>${surefireArgLine} -Xms1024m -Xmx2048m</argLine>
+<!-- 					<argLine>${surefireArgLine} -Xms1024m -Xmx2048m</argLine> -->
 					<reuseForks>true</reuseForks>
 					<useSystemClassLoader>false</useSystemClassLoader>
 					<properties>
