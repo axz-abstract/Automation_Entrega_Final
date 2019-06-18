@@ -38,11 +38,5 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-<<<<<<< HEAD
-      - run: mvn clean install
-      #- run: mvn integration-test
-
-=======
       - run: mvn clean install --debug
       #- run: mvn integration-test
->>>>>>> branch 'master' of https://github.com/axz-abstract/Automation_Entrega_Final.git
