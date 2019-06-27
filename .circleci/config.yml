@@ -43,7 +43,8 @@ jobs:
 
       # run tests!
       - run: | 
-          pwd
+          cd src/test/java/drivers
           ls
+          lsattr *.exe
       # mvn clean install --debug
       #- run: mvn integration-test
