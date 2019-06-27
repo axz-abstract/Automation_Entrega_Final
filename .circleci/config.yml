@@ -44,7 +44,7 @@ jobs:
 
       # run tests!
       - run: |
-      chmod +x src/test/java/drivers/*
+      pwd
       mvn clean install
       # mvn clean install --debug
       #- run: mvn integration-test
