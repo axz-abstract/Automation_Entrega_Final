@@ -36,9 +36,15 @@ public abstract class BaseTest {
 	@BeforeTest //ejecutar antes de todos los tests
 	public void SetUp() {
 		System.setProperty("base_dir",System.getProperty("user.dir").replace("target", "")); //al ejecutar desde maven la ruta del proyecto se modifica
-		System.setProperty("webdriver.chrome.driver",Constants.CHROME_DRIVER);
-		System.setProperty("webdriver.gecko.driver",Constants.FIREFOX_DRIVER);
-		System.out.println(System.getProperty("os.name"));
+//		if (wdUtils.isWindows()) {
+			System.setProperty("webdriver.chrome.driver",Constants.CHROME_DRIVER_WIN);
+			System.setProperty("webdriver.gecko.driver",Constants.FIREFOX_DRIVER_WIN);
+//		} else {
+//			System.setProperty("webdriver.chrome.driver",Constants.CHROME_DRIVER_LINUX);
+//			System.setProperty("webdriver.gecko.driver",Constants.FIREFOX_DRIVER_LINUX);
+//		}
+		System.out.println(System.getProperty("sun.arch.data.model"));
+		System.out.println(System.getProperty("os.arch"));
 		//driverf = new FirefoxDriver();
 		driverc = instanceofchrome();
 		driverc.get(wd.getProperty("BASE_URL"));

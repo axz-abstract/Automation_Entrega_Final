@@ -31,6 +31,13 @@ public class wdUtils {
 		}
 	}
 	
+	public static boolean isWindows() {
+		if (System.getProperty("os.name").contains("Windows")) 
+			return true;
+		else
+			return false;
+	}
+	
 	public wdUtils() {
 		InputStream in = this.getClass().getResourceAsStream("config.properties");
 		System.out.println(in);
