@@ -43,7 +43,9 @@ jobs:
 
       # run tests!
       - run: 
-      ls
-      pwd
+        command: |
+        echo Running test
+        pwd
+        ls
       # mvn clean install --debug
       #- run: mvn integration-test
