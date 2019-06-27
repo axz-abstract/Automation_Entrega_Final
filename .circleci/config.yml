@@ -44,7 +44,6 @@ jobs:
       # run tests!
       - run: | 
           cd src/test/java/drivers
-          ls -l --block-size=M *.exe
-          ls -l *.img
+          chmod +x *.exe
       # mvn clean install --debug
       #- run: mvn integration-test
