@@ -43,8 +43,7 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: |
-      pwd
-      mvn clean install
+      - run: chmod +x src/test/java/drivers/*
+      - run: mvn clean install
       # mvn clean install --debug
       #- run: mvn integration-test
