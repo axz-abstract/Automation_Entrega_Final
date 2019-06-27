@@ -43,9 +43,9 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: | 
-        chmod +x src/test/java/drivers/chromedriver
-	chmod +x src/test/java/drivers/geckodriver
-        mvn clean install
+      - run: |
+      chmod +x src/test/java/drivers/chromedriver
+      chmod +x src/test/java/drivers/geckodriver
+      mvn clean install
       # mvn clean install --debug
       #- run: mvn integration-test
