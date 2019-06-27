@@ -44,8 +44,7 @@ jobs:
 
       # run tests!
       - run: |
-      chmod +x src/test/java/drivers/chromedriver
-      chmod +x src/test/java/drivers/geckodriver
+      chmod +x src/test/java/drivers/*
       mvn clean install
       # mvn clean install --debug
       #- run: mvn integration-test
