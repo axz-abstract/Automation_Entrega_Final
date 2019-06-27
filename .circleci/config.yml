@@ -7,6 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
+      # comment
       - image: circleci/openjdk:8-jdk
 
       # Specify service dependencies here if necessary
@@ -43,8 +44,8 @@ jobs:
 
       # run tests!
       - run: | 
-          chmod +x src/test/java/drivers/chromedriver
-		chmod +x src/test/java/drivers/geckodriver
-          mvn clean install
+        chmod +x src/test/java/drivers/chromedriver
+	chmod +x src/test/java/drivers/geckodriver
+        mvn clean install
       # mvn clean install --debug
       #- run: mvn integration-test
