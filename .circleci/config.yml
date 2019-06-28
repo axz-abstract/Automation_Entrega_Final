@@ -49,6 +49,9 @@ jobs:
       - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
       - run: sudo apt install ./google-chrome*.deb
       - run: google-chrome --version
+      - run: Xvfb :99 -ac -screen 0 1280x1024x24 &
+      - run: export DISPLAY=:99
+      - run: nice -n 10 x11vnc 2>&1 &
       - run: google-chrome --no-sandbox
       - run: mvn clean install
       # mvn clean install --debug
