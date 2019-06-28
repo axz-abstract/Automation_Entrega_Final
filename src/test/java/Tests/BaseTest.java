@@ -25,13 +25,13 @@ public abstract class BaseTest {
 	
 	public WebDriver instanceofchrome() {
 		if (driverc == null) {
-			if (wdUtils.isWindows())
+			//if (wdUtils.isWindows())
 				return new ChromeDriver();
-			else {
-				ChromeOptions chop = new ChromeOptions();
-				chop.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-				return new ChromeDriver(chop);
-			}	
+			//else {
+			//	ChromeOptions chop = new ChromeOptions();
+			//	chop.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+			//	return new ChromeDriver(chop);
+			//}	
 		}
 		else return driverc;
 	}
