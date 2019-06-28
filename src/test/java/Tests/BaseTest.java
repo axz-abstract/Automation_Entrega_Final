@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
@@ -25,13 +26,13 @@ public abstract class BaseTest {
 	
 	public WebDriver instanceofchrome() {
 		if (driverc == null) {
-			//if (wdUtils.isWindows())
+			if (wdUtils.isWindows())
 				return new ChromeDriver();
-			//else {
-			//	ChromeOptions chop = new ChromeOptions();
-			//	chop.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
-			//	return new ChromeDriver(chop);
-			//}	
+			else {
+				ChromeOptions chop = new ChromeOptions();
+				chop.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+				return new ChromeDriver(chop);
+			}	
 		}
 		else return driverc;
 	}
