@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import junit.framework.Assert;
 
 public class SignUpSuccess extends BasePage {
 	
@@ -23,12 +22,10 @@ public class SignUpSuccess extends BasePage {
 	public String getMessage() {
 		try {
 			driver.findElement(By.cssSelector(alertdanger));
-			Assert.fail("Correo electrónico en uso");
+			return "Correo Electrónico en uso";
 		} catch (Exception e) {
 			return this.signUpSuccess.getText();
 		}
-		return null;			
-		
 	}
 
 	@Override

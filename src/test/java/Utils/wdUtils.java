@@ -40,7 +40,7 @@ public class wdUtils {
 	
 	public wdUtils() {
 		InputStream in = this.getClass().getResourceAsStream("config.properties");
-		System.out.println(in);
+		//System.out.println(in);
 		prop = new Properties();
 		try {
 			prop.load(in);

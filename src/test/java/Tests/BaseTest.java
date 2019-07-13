@@ -1,17 +1,13 @@
 package Tests;
 
-import java.nio.file.Paths;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import Utils.Constants;
 import Utils.wdUtils;
@@ -25,7 +21,13 @@ public abstract class BaseTest {
 	
 	public WebDriver instanceofchrome() {
 		if (driverc == null) {
-			return new ChromeDriver();
+			if (wdUtils.isWindows())
+				return new ChromeDriver();
+			else {
+				ChromeOptions chop = new ChromeOptions();
+				chop.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+				return new ChromeDriver(chop);
+			}	
 		}
 		else return driverc;
 	}
