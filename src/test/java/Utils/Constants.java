@@ -10,5 +10,6 @@ public class Constants {
 	public static final String CHROME_DRIVER_LINUX = System.getProperty("base_dir")+"/src/test/java/drivers/chromedriver";
 	public static final String SIGNUP_CSV_FILE = System.getProperty("base_dir")+"/src/test/java/Utils/registro.csv";
 	public static final String LOGIN_CSV_FILE = System.getProperty("base_dir")+"/src/test/java/Utils/login.csv";
+	public static final int j = 98;
 
 }
