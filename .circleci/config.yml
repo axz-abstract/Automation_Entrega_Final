@@ -43,9 +43,13 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: | 
-        chmod +x src/test/java/drivers/chromedriver
-	chmod +x src/test/java/drivers/geckodriver
-        mvn clean install
+      - run: chmod +x src/test/java/drivers/*
+      - run: ls -l src/test/java/drivers/
+      - run: sudo apt-get install libxss1 libappindicator1 libindicator7
+      - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - run: sudo apt install ./google-chrome*.deb
+      - run: google-chrome --version
+      - run: google-chrome --no-sandbox --headless window-size=1024,768
+      - run: mvn clean install
       # mvn clean install --debug
       #- run: mvn integration-test
